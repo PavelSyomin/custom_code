@@ -13,16 +13,20 @@
   <authorUrl>https://github.com/PavelSyomin</authorUrl>
   <version>2.0</version>
   <description>FLEXICUSTOMCODE</description>
+  <namespace>Joomla\Module\FlexiCustomCode</namespace>
 	<files>
 		<filename module="mod_flexi_custom_code">mod_flexi_custom_code.php</filename>
+		<folder>Helper</folder>
+		<folder>language</folder>
 		<folder>tmpl</folder>
 		<filename>index.html</filename>
-    	<filename>helper.php</filename>
-    	<filename>mod_flexi_customcode.xml</filename>
+    	<filename>mod_flexi_custom_code.xml</filename>
 	</files>
 	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.mod_flexi_customcode.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.mod_flexi_customcode.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_flexi_custom_code.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_flexi_custom_code.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_flexi_custom_code.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_flexi_custom_code.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">

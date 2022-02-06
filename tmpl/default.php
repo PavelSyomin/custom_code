@@ -11,6 +11,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 use Joomla\CMS\Factory;
+use Joomla\Module\FlexiCustomCode\Site\Helper\Helper;
 
 // Get settings
 $codearea 	= $params->get('code_area');
@@ -50,20 +51,20 @@ if (!$clean_all) {
 switch($userlevel) {
 	case 1: //All Visitors
 		if (($mylevel == 'logout') or ($mylevel == 'login')){
-			if ($use_php == 1) { modFlexiCustomCode::parsePHPviaFile($codearea); }
+			if ($use_php == 1) { Helper::parsePHP($codearea); }
 				else {	echo $codearea; }
 		}
 		break;
 	case 2: //Guest Visitors
 		if ($mylevel == 'login'){
-			if ($use_php == 1) { modFlexiCustomCode::parsePHPviaFile($codearea); }
+			if ($use_php == 1) { Helper::parsePHP($codearea); }
 				else {	echo $codearea; }
 		}
 		break;
 	case 0: //Registered Visitors
 	default:
 		if ($mylevel == 'logout'){
-			if ($use_php == 1) { modFlexiCustomCode::parsePHPviaFile($codearea); }
+			if ($use_php == 1) { Helper::parsePHP($codearea); }
 				else {	echo $codearea; }
 		}
 		break;

@@ -11,8 +11,6 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
+use Joomla\Module\FlexiCustomCode\Site\Helper\Helper;
 
-// Include the syndicate functions only once
-require_once (dirname(__FILE__) . '/helper.php');
-
-require ModuleHelper::getLayoutPath('mod_flexi_customcode', $params->get('layout', 'default'));
+require ModuleHelper::getLayoutPath('mod_flexi_custom_code', $params->get('layout', 'default'));

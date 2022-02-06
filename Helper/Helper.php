@@ -7,16 +7,18 @@
  * @license     GNU General Public License version 3; see LICENSE.txt
  */
 
-// no direct access
+namespace Joomla\Module\FlexiCustomCode\Site\Helper;
+
+// No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-class modFlexiCustomCode {
-	public static function parsePHPviaFile($custom) {
-		$tmpfname = tempnam(JPATH_SITE."/tmp", "html");
+class Helper {
+	public static function parsePHP($code) {
+		$tmpfname = tempnam(JPATH_SITE . "/tmp", "php");
 		$handle = fopen($tmpfname, "w");
-		fwrite($handle, $custom, strlen($custom));
+		fwrite($handle, $code);
 		fclose($handle);
-		include_once($tmpfname);
+		require_once($tmpfname);
 		unlink($tmpfname);
 	}
 }
