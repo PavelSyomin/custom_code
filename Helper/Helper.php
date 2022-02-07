@@ -18,7 +18,7 @@ class Helper {
 		$handle = fopen($tmpfname, "w");
 		fwrite($handle, $code);
 		fclose($handle);
-		require_once($tmpfname);
+		require_once $tmpfname;
 		unlink($tmpfname);
 	}
 }

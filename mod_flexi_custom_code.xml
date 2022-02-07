@@ -12,7 +12,7 @@
   <authorEmail>pas.ntg@gmail.com</authorEmail>
   <authorUrl>https://github.com/PavelSyomin</authorUrl>
   <version>2.0</version>
-  <description>FLEXICUSTOMCODE</description>
+  <description>FLEXI_CUSTOM_CODE</description>
   <namespace>Joomla\Module\FlexiCustomCode</namespace>
 	<files>
 		<filename module="mod_flexi_custom_code">mod_flexi_custom_code.php</filename>
@@ -31,54 +31,66 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="code_area" filter="raw" type="textarea" default="" label="FCC_CODE" cols="40" rows="20" description="FCC_CODEDESC" />
-				<field name="use_php" type="list" default="1" label="FCC_USEPHP" description="FCC_USEPHPDESC">
+				<field
+				    name="code"
+				    filter="raw"
+				    type="textarea"
+				    default=""
+				    rows="15"
+				    label="FCC_CODE"
+				    description="FCC_CODEDESC"
+				/>
+				<field
+				    name="use_php"
+				    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+				    default="0"
+				    label="FCC_USEPHP"
+				    description="FCC_USEPHPDESC"
+				    >
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="userlevel" type="radio" default="1" label="FCC_SHOWTO" description="FCC_SHOWTODESC" >
-					<option value="0">FCC_REGISTERED</option>
-					<option value="1">FCC_ALL</option>
-					<option value="2">FCC_GUEST</option>
-				</field>
-				<field name="clean_js" type="list" default="1" label="FCC_CLEANJS" description="FCC_CLEANJSDESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-				<field name="clean_css" type="list" default="1" label="FCC_CLEANCSS" description="FCC_CLEANCSSDESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-				<field name="clean_all" type="list" default="1" label="FCC_CLEANHTML" description="FCC_CLEANHTMLDESC">
+				<field
+				    name="clean"
+				    type="radio"
+				    layout="joomla.form.field.radio.switcher"
+				    default="1"
+				    label="FCC_CLEAN"
+				    description="FCC_CLEANDESC"
+				    >
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 			</fieldset>
-			<fieldset
-				name="advanced">
-
+			<fieldset name="advanced">
 				<field
 					name="layout"
 					type="modulelayout"
+					class="form-select"
+					validate="moduleLayout"
 					label="JFIELD_ALT_LAYOUT_LABEL"
-					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
 
 				<field
 					name="moduleclass_sfx"
-					type="text"
+					type="textarea"
+					rows="3"
+					validate="CssIdentifier"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                />
 
 				<field
 					name="cache"
 					type="list"
 					default="1"
+					filter="integer"
+					validate="options"
 					label="COM_MODULES_FIELD_CACHING_LABEL"
-					description="COM_MODULES_FIELD_CACHING_DESC">
-					<option
-						value="1">JGLOBAL_USE_GLOBAL</option>
-					<option
-						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
 				</field>
 
 				<field
@@ -86,13 +98,15 @@
 					type="text"
 					default="900"
 					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+					filter="integer"
+				/>
+				
 				<field
 					name="cachemode"
 					type="hidden"
-					default="static">
-					<option
-						value="static"></option>
+					default="static"
+					>
+					<option value="static"></option>
 				</field>
 			</fieldset>
 		</fields>
