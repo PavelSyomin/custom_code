@@ -12,8 +12,10 @@ namespace Joomla\Module\FlexiCustomCode\Site\Helper;
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-class Helper {
-	public static function parsePHP($code) {
+class Helper
+{
+	public static function parsePHP($code)
+	{
 		$tmpfname = tempnam(JPATH_SITE . '/tmp', 'php');
 		$handle = fopen($tmpfname, 'w');
 		fwrite($handle, $code);

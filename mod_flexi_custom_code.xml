@@ -11,7 +11,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>pas.ntg@gmail.com</authorEmail>
 	<authorUrl>https://github.com/PavelSyomin</authorUrl>
-	<version>2.0</version>
+	<version>2.0beta2</version>
 	<description>FLEXI_CUSTOM_CODE</description>
 	<namespace>Joomla\Module\FlexiCustomCode</namespace>
 	<files>
@@ -20,11 +20,11 @@
 		<folder>language</folder>
 		<folder>tmpl</folder>
 		<filename>index.html</filename>
-    	<filename>mod_flexi_custom_code.xml</filename>
+		<filename>mod_flexi_custom_code.xml</filename>
 	</files>
 	<updateservers>
-        <server type="extension" priority="1" name="Flexi Custom Code updates">https://github.com/PavelSyomin/flexi_custom_code/raw/main/mod_flexi_custom_code_update.xml</server>
-    </updateservers>
+	<server type="extension" priority="1" name="Flexi Custom Code updates">https://github.com/PavelSyomin/flexi_custom_code/raw/main/mod_flexi_custom_code_update.xml</server>
+	</updateservers>
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.mod_flexi_custom_code.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.mod_flexi_custom_code.sys.ini</language>
@@ -71,7 +71,7 @@
 					rows="3"
 					validate="CssIdentifier"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-                />
+		/>
 
 				<field
 					name="cache"
