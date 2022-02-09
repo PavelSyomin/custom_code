@@ -14,8 +14,8 @@ defined('_JEXEC') or die('Restricted access');
 
 class Helper {
 	public static function parsePHP($code) {
-		$tmpfname = tempnam(JPATH_SITE . "/tmp", "php");
-		$handle = fopen($tmpfname, "w");
+		$tmpfname = tempnam(JPATH_SITE . '/tmp', 'php');
+		$handle = fopen($tmpfname, 'w');
 		fwrite($handle, $code);
 		fclose($handle);
 		require_once $tmpfname;

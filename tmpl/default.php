@@ -14,17 +14,18 @@ use Joomla\CMS\Factory;
 use Joomla\Module\FlexiCustomCode\Site\Helper\Helper;
 
 // Get settings
-$code	    = $params->get('code');
-$clean 	= $params->get('clean');
-$use_php 	= $params->get('use_php');
+$code 			= $params->get('code');
+$clean			= $params->get('clean');
+$php 	= strpos($code, '<?php') !== false;
 
-// Clean CSS & JS or All
+// Clean the code
 if ($clean)
 {
-    $code = str_replace(['<br />', '\\n', '\\t'], '', $code);
+    $code = str_replace(['\\n', '\\t', '\\r'], ' ', $code);
+    $code = preg_replace('/\s+/', ' ', $code);
 }
 
-if ($use_php == 1)
+if ($php)
 {
     Helper::parsePHP($code);
 }
