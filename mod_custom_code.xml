@@ -11,7 +11,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>pas.ntg@gmail.com</authorEmail>
 	<authorUrl>https://github.com/PavelSyomin</authorUrl>
-	<version>2.0beta2</version>
+	<version>1.0</version>
 	<description>CUSTOM_CODE</description>
 	<namespace>Joomla\Module\CustomCode</namespace>
 	<files>
