@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Flexi Custom Code, a Joomla module
+ * @package     Custom Code, a Joomla module
  *
  * @author      RBO Team > Project::: RumahBelanja.com & AppsNity.com; Pavel Syomin
  * @copyright   Copyright © Pavel Syomin, 2022 
  * @license     GNU General Public License version 3; see LICENSE.txt
  */
 
-namespace Joomla\Module\FlexiCustomCode\Site\Helper;
+namespace Joomla\Module\CustomCode\Site\Helper;
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');

@@ -1,5 +1,5 @@
 #! /bin/sh
 
-zip -r mod_flexi_custom_code.zip Helper/ tmpl/ language/ mod_flexi_custom_code.php mod_flexi_custom_code.xml index.html LICENSE
+zip -r mod_custom_code.zip Helper/ tmpl/ language/ mod_custom_code.php mod_custom_code.xml index.html LICENSE
 
 exit 0

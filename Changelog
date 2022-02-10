@@ -1,3 +1,5 @@
+History of original Flexi Custom Code module
+
 v. 1.0 — December 16, 2010
 Initial release.
 
@@ -20,7 +22,10 @@ Added support for Joomla 3.0.
 Fixed and Tested for Joomla 3.x.
 Fixed and Tested for PHP 5.5.x.
 
-* 2.0 — February 9, 2022
+History of Custom Code module
+
+* 1.0 — February 10, 2022
+Name changed to Custom Code to avoid confusion with original module.
 Added support for Joomla 4.x.
 Added support for PHP 8.
 Added auto-detection of PHP code.

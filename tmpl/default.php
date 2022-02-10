@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Flexi Custom Code, a Joomla module
+ * @package     Custom Code, a Joomla module
  *
  * @author      RBO Team > Project::: RumahBelanja.com & AppsNity.com; Pavel Syomin
  * @copyright   Copyright © Pavel Syomin, 2022 
@@ -11,7 +11,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 use Joomla\CMS\Factory;
-use Joomla\Module\FlexiCustomCode\Site\Helper\Helper;
+use Joomla\Module\CustomCode\Site\Helper\Helper;
 
 // Get settings
 $code 			= $params->get('code');

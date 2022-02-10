@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Flexi Custom Code, a Joomla module
+ * @package     Custom Code, a Joomla module
  *
  * @author      RBO Team > Project::: RumahBelanja.com & AppsNity.com; Pavel Syomin
  * @copyright   Copyright © Pavel Syomin, 2022 
@@ -11,6 +11,6 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
-use Joomla\Module\FlexiCustomCode\Site\Helper\Helper;
+use Joomla\Module\CustomCode\Site\Helper\Helper;
 
-require ModuleHelper::getLayoutPath('mod_flexi_custom_code', $params->get('layout', 'default'));
+require ModuleHelper::getLayoutPath('mod_custom_code', $params->get('layout', 'default'));
