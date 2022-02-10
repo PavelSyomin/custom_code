@@ -9,7 +9,7 @@
         <version>1.0</version>
         <infourl>https://github.com/PavelSyomin/custom_code/blob/main/Changelog</infourl>
         <downloads>
-            <downloadurl type="full" format="zip"></downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/PavelSyomin/custom_code/releases/download/1.0/mod_custom_code.zip</downloadurl>
         </downloads>
         <maintainer>Pavel Syomin</maintainer>
         <maintainerurl>https://github.com/PavelSyomin</maintainerurl>
