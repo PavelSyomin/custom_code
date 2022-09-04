@@ -25,10 +25,13 @@ Fixed and Tested for PHP 5.5.x.
 
 History of Custom Code module
 
-* 1.0 — February 10, 2022
+* 1.0.0 — February 10, 2022
 Name changed to Custom Code to avoid confusion with original module.
 Added support for Joomla 4.x.
 Added support for PHP 8.
 Added auto-detection of PHP code.
 Removed useless options from module settings.
 Code refactoring and codestyle improvements.
+
+1.0.1 – September 4, 2022
+Fix a bug with missing CssIdentifier validation rule in Joomla 3.x.

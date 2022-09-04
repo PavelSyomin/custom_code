@@ -1,107 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension
-	type="module"
-	version="3.x"
-	client="site"
-	method="upgrade">
-	<name>Custom Code</name>
-	<author>Pavel Syomin and AppsNity</author>
-	<creationDate>July 12th, 2012</creationDate>
-	<copyright>AppsNity 2014–2022, Pavel Syomin 2022—</copyright>
-	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<authorEmail>pas.ntg@gmail.com</authorEmail>
-	<authorUrl>https://github.com/PavelSyomin</authorUrl>
-	<version>1.0</version>
-	<description>CUSTOM_CODE</description>
-	<namespace>Joomla\Module\CustomCode</namespace>
-	<files>
-		<filename module="mod_custom_code">mod_custom_code.php</filename>
-		<folder>Helper</folder>
-		<folder>language</folder>
-		<folder>tmpl</folder>
-		<filename>index.html</filename>
-		<filename>mod_custom_code.xml</filename>
-	</files>
-	<updateservers>
-	<server type="extension" priority="1" name="Custom Code updates">https://github.com/PavelSyomin/custom_code/raw/main/mod_custom_code_update.xml</server>
-	</updateservers>
-	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.mod_custom_code.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.mod_custom_code.sys.ini</language>
-		<language tag="ru-RU">language/ru-RU/ru-RU.mod_custom_code.ini</language>
-		<language tag="ru-RU">language/ru-RU/ru-RU.mod_custom_code.sys.ini</language>
-	</languages>
-	<config>
-		<fields name="params">
-			<fieldset name="basic">
-				<field
-				    name="code"
-				    filter="raw"
-				    type="textarea"
-				    default=""
-				    rows="15"
-				    label="CC_CODE"
-				    description="CC_CODEDESC"
-				/>
-				<field
-				    name="clean"
-				    type="radio"
+    type="module"
+    version="3.x"
+    client="site"
+    method="upgrade">
+    <name>Custom Code</name>
+    <author>Pavel Syomin and AppsNity</author>
+    <creationDate>July 12th, 2012</creationDate>
+    <copyright>AppsNity 2014–2022, Pavel Syomin 2022—</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>pas.ntg@gmail.com</authorEmail>
+    <authorUrl>https://github.com/PavelSyomin</authorUrl>
+    <version>1.0.1</version>
+    <description>CUSTOM_CODE</description>
+    <namespace>Joomla\Module\CustomCode</namespace>
+    <files>
+        <filename module="mod_custom_code">mod_custom_code.php</filename>
+        <folder>Helper</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename>mod_custom_code.xml</filename>
+    </files>
+    <updateservers>
+    <server type="extension" priority="1" name="Custom Code updates">https://github.com/PavelSyomin/custom_code/raw/main/mod_custom_code_update.xml</server>
+    </updateservers>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_custom_code.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_custom_code.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.mod_custom_code.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.mod_custom_code.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="code"
+                    filter="raw"
+                    type="textarea"
+                    default=""
+                    rows="15"
+                    label="CC_CODE"
+                    description="CC_CODEDESC"
+                />
+                <field
+                    name="clean"
+                    type="radio"
                     class="btn-group btn-group-yesno"
-				    layout="joomla.form.field.radio.switcher"
-				    default="1"
-				    label="CC_CLEAN"
-				    description="CC_CLEANDESC"
-				    >
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			</fieldset>
-			<fieldset name="advanced">
-				<field
-					name="layout"
-					type="modulelayout"
-					class="form-select"
-					validate="moduleLayout"
-					label="JFIELD_ALT_LAYOUT_LABEL"
-					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
-				/>
+                    layout="joomla.form.field.radio.switcher"
+                    default="1"
+                    label="CC_CLEAN"
+                    description="CC_CLEANDESC"
+                    >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    class="form-select"
+                    validate="moduleLayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
 
-				<field
-					name="moduleclass_sfx"
-					type="textarea"
-					rows="3"
-					validate="CssIdentifier"
-					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-		/>
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea"
+                    rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+        />
 
-				<field
-					name="cache"
-					type="list"
-					default="1"
-					filter="integer"
-					validate="options"
-					label="COM_MODULES_FIELD_CACHING_LABEL"
-					>
-					<option value="1">JGLOBAL_USE_GLOBAL</option>
-					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-				</field>
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    filter="integer"
+                    validate="options"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
 
-				<field
-					name="cache_time"
-					type="text"
-					default="900"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					filter="integer"
-				/>
-				
-				<field
-					name="cachemode"
-					type="hidden"
-					default="static"
-					>
-					<option value="static"></option>
-				</field>
-			</fieldset>
-		</fields>
-	</config>
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    filter="integer"
+                />
+
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static"
+                    >
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 </extension>
